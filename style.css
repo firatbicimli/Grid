@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Finlandica:ital@1&family=Fira+Sans+Condensed:wght@500;600;900&family=Mulish:wght@400;700&family=Nunito:wght@300&family=Poppins:wght@400;500;700&family=Tapestry&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+}
+
+body {
+    background: #edf2f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-bottom: 20px;
+}
+
+.card:nth-of-type(1) {
+    grid-column: 1 / span 2;
+}
+
+.card:nth-of-type(5) {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+}
+
+.card:nth-of-type(4) {
+    grid-column: 2 / span 2;
+    grid-row: 2;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .card:nth-of-type(1) {
+        grid-column: 1;
+    }
+    
+    .card:nth-of-type(5) {
+        grid-column: 1;
+        grid-row: 5;
+    }
+    
+    .card:nth-of-type(4) {
+        grid-column: 1;
+        grid-row: 4;
+    }
+}
+
+
+img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 3px solid #996ed9;
+}
+
+.card header {
+    display: flex;
+    
+    margin-bottom: 10px;
+}
+
+header h3 {
+    font-size: 15px;
+}
+
+header p {
+    opacity: 50%;
+}
+
+.card-lead {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.card-desc {
+    font-size: 15px;
+    line-height: 1.4;
+    opacity: 70%;
+}
+
+.bg-purple {
+    background-color: hsl(263, 55%, 52%);
+    color: #fff;
+}
+
+.bg-gray-blue {
+    background-color: hsl(217, 19%, 35%);
+    color: #fff;
+}
+
+.bg-black-blue {
+    background-color: hsl(219, 29%, 14%);
+    color: #fff;
+}
